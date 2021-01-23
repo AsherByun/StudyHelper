@@ -5,10 +5,12 @@ import java.util.Optional;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
+import org.springframework.stereotype.Service;
 
 import com.studyhelper.member.dao.MemberRepository;
 import com.studyhelper.member.dto.Member;
 
+@Service
 public class MemberDetailService implements UserDetailsService {
 	private final MemberRepository memberRepo;
 
