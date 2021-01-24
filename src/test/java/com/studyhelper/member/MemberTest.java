@@ -22,15 +22,15 @@ public class MemberTest {
 	@Autowired
 	private PasswordEncoder encoder;
 	
-	@Test
-	public void 맴버삽입테스트() {
-		Member member = new Member();
-		member.setAge(27);
-		member.setId("dfdo333");
-		member.setGender(Gender.MAN);
-		member.setPassword(encoder.encode("1234"));
-		member.setNickName("hohoho");
-		member.setRole(Role.ROLE_ADMIN);
-		memberRepository.save(member);
-	}
+//	@Test
+//	public void 맴버삽입테스트() {
+//		Member member = new Member();
+//		member.setAge(27);
+//		member.setId("dfdo333");
+//		member.setGender(Gender.MAN);
+//		member.setPassword(encoder.encode("1234"));
+//		member.setNickName("hohoho");
+//		member.setRole(Role.ROLE_ADMIN);
+//		memberRepository.save(member);
+//	}
 }
