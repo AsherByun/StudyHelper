@@ -1,18 +1,10 @@
 language: java
-jdk:
-  - openjdk8
-
-branches:
-  only:
-    - master
-
-# Travis CI 서버의 Home
-cache:
-  directories:
-    - '$HOME/.m2/repository'
-
-# CI 실행 완료시 메일로 알람
-notifications:
-  email:
-    recipients:
-      - dfdo333@gmail.com 
+sudo: true
+dist: trusty
+jdk: oraclejdk8
+addons:
+  apt:
+    packages:
+      - oracle-java8-installer
+before_install:
+  - chmod +x mvnw
