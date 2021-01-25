@@ -102,6 +102,7 @@
 				</configuration>
 			</plugin>
 		</plugins>
+		<finalName>study-helper-app-ver1</finalName>
 	</build>
 
 </project>

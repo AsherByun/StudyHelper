@@ -1,0 +1,22 @@
+version: "3"
+services:
+    s_database:
+        image: mysql:8.0.22
+        environment:
+          MYSQL_DATABASE: s_db
+          MYSQL_ROOT_PASSWORD: root
+          MYSQL_PASSWORD: root
+        ports:
+          - 3307:3306        
+
+    spring_boot_application:
+        image: spring_boot_application
+        environment:
+          SPRING_DATASOURCE_URL: jdbc:mysql://s_database:3306/s_db?autoReconnect=true&characterEncoding=UTF-8&serverTimezone=UTC
+          SPRING_DATASOURCE_USERNAME: "root"
+          SPRING_DATASOURCE_PASSWORD: "root"
+        build: .
+        ports:
+          - 8080:8080
+        depends_on:
+          - s_database

@@ -15,7 +15,6 @@ import com.studyhelper.properties.Role;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-@Commit
 public class MemberTest {
 	@Autowired
 	private MemberRepository memberRepository;
